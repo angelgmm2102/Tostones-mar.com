@@ -1,0 +1,27 @@
+TOSTONES MAR — Qué reunir antes de terminar la página
+========================================================
+
+1. TEXTOS
+   - Historia de la familia / del negocio (2-3 párrafos)
+   - Eslogan corto
+   - Lista de productos: nombre, descripción, precio, presentación (bolsa chica/grande, etc.)
+   - Dirección o zona de reparto
+   - Horarios de atención
+   - Teléfono / número de WhatsApp para pedidos
+   - Redes sociales (Instagram, Facebook) si tienen
+
+2. IMÁGENES (ponlas en la carpeta "imagenes")
+   - Logo (si existe)
+   - Foto de cada producto
+   - Fotos del proceso de elaboración
+   - Foto del local o del equipo (opcional, da calidez)
+
+3. COLORES DE MARCA
+   - Si tienen empaque o etiqueta, un color de referencia ayuda a que la web
+     se vea consistente con lo físico.
+
+Con esto reemplazo todos los [REEMPLAZAR: ...] del index.html y cambio las
+cajas de "Foto del producto" por las imágenes reales.
+
+Para ver el sitio ahora mismo: abre index.html con doble clic o dímelo y
+lo abro en el navegador.
