@@ -42,12 +42,13 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; }
   gap: 12px;
 }
 
-.logo {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: var(--marron);
+.logo-img {
+  display: block;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
 }
-.logo span { color: var(--amarillo-oscuro); }
 
 .nav a {
   margin: 0 14px;
