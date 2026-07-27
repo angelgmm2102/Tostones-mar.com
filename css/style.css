@@ -1,10 +1,11 @@
 :root {
-  --amarillo: #f4a825;
-  --amarillo-oscuro: #d68910;
-  --verde: #3d7a3d;
-  --marron: #5a3a22;
-  --crema: #fff8ec;
-  --texto: #3a2a1a;
+  --crema: #f6f3de;
+  --crema-oscuro: #e9e4bf;
+  --oliva: #6b5a24;
+  --oliva-oscuro: #443a17;
+  --mostaza: #e8ab10;
+  --texto: #2e2410;
+  --blanco: #fffdf6;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -27,7 +28,7 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; }
 /* HEADER */
 .header {
   background: var(--crema);
-  border-bottom: 3px solid var(--amarillo);
+  border-bottom: 3px solid var(--oliva);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -37,15 +38,15 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 20px;
+  padding: 10px 20px;
   flex-wrap: wrap;
   gap: 12px;
 }
 
 .logo-img {
   display: block;
-  width: 56px;
-  height: 56px;
+  width: 92px;
+  height: 92px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -56,7 +57,7 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; }
   color: var(--texto);
   font-weight: 600;
 }
-.nav a:hover { color: var(--amarillo-oscuro); }
+.nav a:hover { color: var(--oliva); }
 
 .btn-whatsapp-header {
   background: #25D366;
@@ -70,8 +71,8 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; }
 
 /* HERO */
 .hero {
-  background: linear-gradient(135deg, var(--amarillo) 0%, var(--amarillo-oscuro) 100%);
-  color: white;
+  background: linear-gradient(160deg, var(--oliva) 0%, var(--oliva-oscuro) 100%);
+  color: var(--blanco);
   text-align: center;
   padding: 90px 20px;
 }
@@ -79,6 +80,7 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; }
 .hero h1 {
   font-size: 2.6rem;
   margin-bottom: 16px;
+  color: var(--mostaza);
 }
 
 .hero p {
@@ -103,11 +105,11 @@ h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; }
 /* SECTIONS */
 section { padding: 70px 0; }
 
-.nosotros { background: white; text-align: center; }
+.nosotros { background: var(--blanco); text-align: center; }
 .nosotros h2, .productos h2, .contacto h2 {
   font-size: 2rem;
-  margin-bottom: 24px;
-  color: var(--marron);
+  margin-bottom: 16px;
+  color: var(--oliva);
 }
 .nosotros p {
   max-width: 700px;
@@ -115,45 +117,94 @@ section { padding: 70px 0; }
   font-size: 1.05rem;
 }
 
-.productos { text-align: center; }
+.productos { text-align: center; background: var(--crema-oscuro); }
+.productos .subtitulo {
+  color: var(--oliva);
+  margin-bottom: 30px;
+  font-size: 1.05rem;
+}
 
 .grid-productos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
-  margin-top: 30px;
 }
 
 .producto-card {
-  background: white;
+  background: var(--blanco);
   border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
   text-align: left;
 }
 
 .producto-img.placeholder {
   background: repeating-linear-gradient(45deg, #f0e0c0, #f0e0c0 10px, #ecd8ae 10px, #ecd8ae 20px);
   height: 180px;
-  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #8a6a3a;
   font-weight: 600;
-  margin-bottom: 14px;
 }
 
-.producto-card h3 { margin-bottom: 8px; color: var(--marron); }
-.producto-card p { font-size: 0.95rem; margin-bottom: 12px; color: #555; }
-.precio { font-weight: bold; color: var(--verde); font-size: 1.1rem; }
+.producto-ribbon {
+  background: var(--oliva);
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ribbon-tipo {
+  color: var(--blanco);
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.ribbon-sabor {
+  color: var(--mostaza);
+  font-family: 'Segoe Script', 'Brush Script MT', Georgia, cursive;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.producto-body { padding: 18px; }
+.producto-body p { font-size: 0.95rem; margin-bottom: 10px; color: var(--texto); }
+.producto-body .alergenos { font-size: 0.82rem; color: #6b5f45; font-style: italic; }
+.precio { font-weight: bold; color: var(--oliva); font-size: 1.1rem; }
+
+.nutricion {
+  max-width: 480px;
+  margin: 50px auto 0;
+  background: var(--blanco);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+}
+.nutricion h3 {
+  background: var(--oliva);
+  color: var(--blanco);
+  padding: 14px 18px;
+  font-size: 1.1rem;
+}
+.nutricion table { width: 100%; border-collapse: collapse; }
+.nutricion td {
+  padding: 10px 18px;
+  border-bottom: 1px solid var(--crema-oscuro);
+  text-align: left;
+}
+.nutricion td:last-child { text-align: right; font-weight: 600; }
+.nutricion .fila-sub { padding-left: 30px; color: #6b5f45; font-size: 0.9rem; }
 
 .contacto {
-  background: var(--marron);
-  color: white;
+  background: var(--oliva-oscuro);
+  color: var(--blanco);
   text-align: center;
 }
-.contacto h2 { color: white; }
+.contacto h2 { color: var(--mostaza); }
 .contacto p { margin-bottom: 20px; }
 
 .datos-contacto {
@@ -165,14 +216,16 @@ section { padding: 70px 0; }
 }
 
 .footer {
-  background: #2a1d10;
+  background: #241d0c;
   color: #ccc;
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
 }
+.footer .legal { margin-top: 6px; font-size: 0.78rem; color: #998f6f; }
 
 @media (max-width: 600px) {
   .hero h1 { font-size: 2rem; }
   .nav { display: none; }
+  .logo-img { width: 68px; height: 68px; }
 }
