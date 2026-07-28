@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Productos - Tostones Mar</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/jpeg" href="imagenes/logo.jpg">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="index.html"><img src="imagenes/logo.jpg" alt="Tostones Mar" class="logo-img"></a>
+    <nav class="nav">
+      <a href="index.html#nosotros">Nosotros</a>
+      <a href="productos.html">Productos</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn" aria-label="Ver carrito">🛒<span class="cart-count" id="cartCount">0</span></button>
+    <a class="btn-whatsapp-header" href="https://wa.me/34633424305" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+  </div>
+</header>
+
+<section class="pagina-productos">
+  <div class="container">
+    <h1>Nuestros Productos</h1>
+    <p class="subtitulo">Plátano verde frito artesanalmente, en tres versiones. Origen España · Peso: 90 gr</p>
+
+    <div class="grid-productos">
+
+      <div class="producto-card">
+        <div class="producto-img placeholder">Foto pendiente</div>
+        <div class="producto-ribbon">
+          <span class="ribbon-tipo">Plátano Frito</span>
+          <span class="ribbon-sabor">Al Punto de Sal 🧂</span>
+        </div>
+        <div class="producto-body">
+          <p><strong>Ingredientes:</strong> plátano verde (88%), aceite de girasol y sal.</p>
+          <p class="alergenos">Alérgenos: no contiene alérgenos declarados.</p>
+          <span class="precio">Precio: [pendiente]</span>
+          <div class="add-to-cart" data-nombre="Plátano Frito - Al Punto de Sal">
+            <div class="cantidad-selector">
+              <button type="button" class="qty-btn" data-action="dec">−</button>
+              <input type="number" class="qty-input" value="1" min="1">
+              <button type="button" class="qty-btn" data-action="inc">+</button>
+            </div>
+            <button type="button" class="btn-add-cart">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="producto-card">
+        <div class="producto-img placeholder">Foto pendiente</div>
+        <div class="producto-ribbon">
+          <span class="ribbon-tipo">Plátano Frito</span>
+          <span class="ribbon-sabor">Al Ajo 🧄</span>
+        </div>
+        <div class="producto-body">
+          <p><strong>Ingredientes:</strong> plátano verde (88%), aceite de girasol, sal y ajo molido.</p>
+          <p class="alergenos">Alérgenos: puede contener trazas de cacahuetes, dióxido de azufre y sulfitos.</p>
+          <span class="precio">Precio: [pendiente]</span>
+          <div class="add-to-cart" data-nombre="Plátano Frito - Al Ajo">
+            <div class="cantidad-selector">
+              <button type="button" class="qty-btn" data-action="dec">−</button>
+              <input type="number" class="qty-input" value="1" min="1">
+              <button type="button" class="qty-btn" data-action="inc">+</button>
+            </div>
+            <button type="button" class="btn-add-cart">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="producto-card">
+        <div class="producto-img placeholder">Foto pendiente</div>
+        <div class="producto-ribbon">
+          <span class="ribbon-tipo">Plátano Frito</span>
+          <span class="ribbon-sabor">Picante 🌶️</span>
+        </div>
+        <div class="producto-body">
+          <p><strong>Ingredientes:</strong> plátano verde (88%), aceite de girasol, sal y pimentón picante.</p>
+          <p class="alergenos">Alérgenos: puede contener cereales con gluten, frutos de cáscara, mostaza y semillas de sésamo.</p>
+          <span class="precio">Precio: [pendiente]</span>
+          <div class="add-to-cart" data-nombre="Plátano Frito - Picante">
+            <div class="cantidad-selector">
+              <button type="button" class="qty-btn" data-action="dec">−</button>
+              <input type="number" class="qty-input" value="1" min="1">
+              <button type="button" class="qty-btn" data-action="inc">+</button>
+            </div>
+            <button type="button" class="btn-add-cart">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="nutricion">
+      <h3>Información nutricional (por 100 gr.)</h3>
+      <table>
+        <tr><td>Valor energético</td><td>2230 kJ / 533 kcal</td></tr>
+        <tr><td>Grasas</td><td>14,3 g</td></tr>
+        <tr><td class="fila-sub">de las cuales saturadas</td><td>1,6 g</td></tr>
+        <tr><td>Hidratos de carbono</td><td>53,1 g</td></tr>
+        <tr><td class="fila-sub">de las cuales azúcares</td><td>6,5 g</td></tr>
+        <tr><td>Proteínas</td><td>3,9 g</td></tr>
+        <tr><td>Sal</td><td>1,5 g</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 Tostones Mar. Todos los derechos reservados.</p>
+    <p class="legal">Razón Social: Ismael José Marcano Zambrano · Nº RGSEAA: 26.023279/TF</p>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>Tu solicitud</h3>
+    <button type="button" class="cerrar" id="cerrarCart" aria-label="Cerrar carrito">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p class="cart-vacio" id="cartVacio">Aún no has añadido productos.</p>
+  </div>
+  <button type="button" class="btn-whatsapp btn-checkout" id="btnCheckout" style="display:none">Enviar solicitud</button>
+</aside>
+
+<div class="modal" id="checkoutModal">
+  <div class="modal-content">
+    <button type="button" class="cerrar" id="cerrarModal" aria-label="Cerrar formulario">✕</button>
+    <h3>Completa tus datos</h3>
+    <p class="modal-nota">Se abrirá tu aplicación de correo con la solicitud lista para enviar a Tostones Mar.</p>
+    <form id="checkoutForm">
+      <label for="nombreCompleto">Nombre completo *</label>
+      <input type="text" id="nombreCompleto" required>
+
+      <label for="telefono">Número de teléfono *</label>
+      <input type="tel" id="telefono" required>
+
+      <label for="correo">Correo electrónico *</label>
+      <input type="email" id="correo" required>
+
+      <button type="submit" class="btn-whatsapp">Enviar solicitud por correo</button>
+    </form>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
