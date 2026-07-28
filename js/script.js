@@ -111,6 +111,8 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     }
     guardar();
     render();
+    cartCount.classList.remove('bump');
+    requestAnimationFrame(() => cartCount.classList.add('bump'));
   }
 
   function abrirCarrito() {
@@ -194,4 +196,41 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 
   render();
+})();
+
+/* ===== MENÚ MÓVIL ===== */
+(function () {
+  const menuBtn = document.getElementById('menuBtn');
+  const nav = document.getElementById('nav');
+  if (!menuBtn || !nav) return;
+
+  menuBtn.addEventListener('click', () => {
+    const abierto = nav.classList.toggle('abierto');
+    menuBtn.setAttribute('aria-expanded', abierto ? 'true' : 'false');
+  });
+
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('abierto');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+
+/* ===== REVELADO AL HACER SCROLL ===== */
+(function () {
+  const elementos = document.querySelectorAll('.reveal');
+  if (!elementos.length || !('IntersectionObserver' in window)) {
+    elementos.forEach(el => el.classList.add('visible'));
+    return;
+  }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  elementos.forEach(el => observer.observe(el));
 })();

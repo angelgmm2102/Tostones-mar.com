@@ -11,26 +11,33 @@
 
 <header class="header">
   <div class="container header-inner">
-    <a href="index.html"><img src="imagenes/logo.jpg" alt="Tostones Mar" class="logo-img"></a>
-    <nav class="nav">
+    <a href="index.html" class="brand">
+      <img src="imagenes/logo.jpg" alt="Tostones Mar" class="logo-img">
+      <span class="brand-name">Tostones<span>Mar</span></span>
+    </a>
+    <nav class="nav" id="nav">
       <a href="index.html#nosotros">Nosotros</a>
       <a href="productos.html">Productos</a>
       <a href="index.html#contacto">Contacto</a>
     </nav>
-    <button class="cart-btn" id="cartBtn" aria-label="Ver carrito">🛒<span class="cart-count" id="cartCount">0</span></button>
-    <a class="btn-whatsapp-header" href="https://wa.me/34633424305" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+    <div class="header-actions">
+      <button class="cart-btn" id="cartBtn" aria-label="Ver carrito">🛒<span class="cart-count" id="cartCount">0</span></button>
+      <a class="btn-whatsapp-header" href="https://wa.me/34633424305" target="_blank" rel="noopener"><span class="wa-icon">💬</span><span class="wa-text">Pedir por WhatsApp</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </header>
 
 <section class="pagina-productos">
-  <div class="container">
+  <div class="container reveal">
+    <span class="section-tag">Catálogo</span>
     <h1>Nuestros Productos</h1>
     <p class="subtitulo">Plátano verde frito artesanalmente, en tres versiones. Origen España · Peso: 90 gr</p>
 
     <div class="grid-productos">
 
       <div class="producto-card">
-        <div class="producto-img placeholder">Foto pendiente</div>
+        <img src="imagenes/sal.jpg" alt="Plátano Frito - Al Punto de Sal" class="producto-img" style="object-position: 50% 34%">
         <div class="producto-ribbon">
           <span class="ribbon-tipo">Plátano Frito</span>
           <span class="ribbon-sabor">Al Punto de Sal 🧂</span>
@@ -51,7 +58,7 @@
       </div>
 
       <div class="producto-card">
-        <div class="producto-img placeholder">Foto pendiente</div>
+        <img src="imagenes/ajo.jpg" alt="Plátano Frito - Al Ajo" class="producto-img" style="object-position: 50% 46%">
         <div class="producto-ribbon">
           <span class="ribbon-tipo">Plátano Frito</span>
           <span class="ribbon-sabor">Al Ajo 🧄</span>
@@ -72,7 +79,7 @@
       </div>
 
       <div class="producto-card">
-        <div class="producto-img placeholder">Foto pendiente</div>
+        <img src="imagenes/picante.jpg" alt="Plátano Frito - Picante" class="producto-img" style="object-position: 50% 33%">
         <div class="producto-ribbon">
           <span class="ribbon-tipo">Plátano Frito</span>
           <span class="ribbon-sabor">Picante 🌶️</span>
@@ -111,7 +118,10 @@
 
 <footer class="footer">
   <div class="container">
-    <p>&copy; 2026 Tostones Mar. Todos los derechos reservados.</p>
+    <div class="footer-inner">
+      <img src="imagenes/logo.jpg" alt="Tostones Mar" class="footer-logo">
+      <p>&copy; 2026 Tostones Mar. Todos los derechos reservados.</p>
+    </div>
     <p class="legal">Razón Social: Ismael José Marcano Zambrano · Nº RGSEAA: 26.023279/TF</p>
   </div>
 </footer>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tostones Mar</title>
+<title>Tostones Mar — Plátano frito artesanal en Tenerife</title>
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" type="image/jpeg" href="imagenes/logo.jpg">
 </head>
@@ -11,119 +11,140 @@
 
 <header class="header">
   <div class="container header-inner">
-    <img src="imagenes/logo.jpg" alt="Tostones Mar" class="logo-img">
-    <nav class="nav">
+    <a href="index.html" class="brand">
+      <img src="imagenes/logo.jpg" alt="Tostones Mar" class="logo-img">
+      <span class="brand-name">Tostones<span>Mar</span></span>
+    </a>
+    <nav class="nav" id="nav">
       <a href="#nosotros">Nosotros</a>
       <a href="productos.html">Productos</a>
       <a href="#contacto">Contacto</a>
     </nav>
-    <button class="cart-btn" id="cartBtn" aria-label="Ver carrito">🛒<span class="cart-count" id="cartCount">0</span></button>
-    <a class="btn-whatsapp-header" href="https://wa.me/34633424305" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+    <div class="header-actions">
+      <button class="cart-btn" id="cartBtn" aria-label="Ver carrito">🛒<span class="cart-count" id="cartCount">0</span></button>
+      <a class="btn-whatsapp-header" href="https://wa.me/34633424305" target="_blank" rel="noopener"><span class="wa-icon">💬</span><span class="wa-text">Pedir por WhatsApp</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </header>
 
 <section class="hero">
   <div class="container hero-inner">
-    <h1>Plátano frito artesanal</h1>
-    <p>Elaborado a mano en Granadilla de Abona, Tenerife. [REEMPLAZAR: eslogan real de la familia]</p>
-  </div>
-
-  <div class="container">
-    <div class="carrusel" id="carrusel">
-      <div class="carrusel-viewport">
-        <div class="carrusel-track" id="carruselTrack">
-
-          <div class="carrusel-slide">
-            <div class="producto-card">
-              <div class="producto-img placeholder">Foto pendiente</div>
-              <div class="producto-ribbon">
-                <span class="ribbon-tipo">Plátano Frito</span>
-                <span class="ribbon-sabor">Al Punto de Sal 🧂</span>
-              </div>
-              <div class="producto-body">
-                <p><strong>Ingredientes:</strong> plátano verde (88%), aceite de girasol y sal.</p>
-                <p class="alergenos">Alérgenos: no contiene alérgenos declarados.</p>
-                <span class="precio">Precio: 1,10 € / unidad</span>
-                <div class="add-to-cart" data-nombre="Plátano Frito - Al Punto de Sal">
-                  <div class="cantidad-selector">
-                    <button type="button" class="qty-btn" data-action="dec">−</button>
-                    <input type="number" class="qty-input" value="1" min="1">
-                    <button type="button" class="qty-btn" data-action="inc">+</button>
-                  </div>
-                  <button type="button" class="btn-add-cart">Añadir al carrito</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="carrusel-slide">
-            <div class="producto-card">
-              <div class="producto-img placeholder">Foto pendiente</div>
-              <div class="producto-ribbon">
-                <span class="ribbon-tipo">Plátano Frito</span>
-                <span class="ribbon-sabor">Al Ajo 🧄</span>
-              </div>
-              <div class="producto-body">
-                <p><strong>Ingredientes:</strong> plátano verde (88%), aceite de girasol, sal y ajo molido.</p>
-                <p class="alergenos">Alérgenos: puede contener trazas de cacahuetes, dióxido de azufre y sulfitos.</p>
-                <span class="precio">Precio: 1,10 € / unidad</span>
-                <div class="add-to-cart" data-nombre="Plátano Frito - Al Ajo">
-                  <div class="cantidad-selector">
-                    <button type="button" class="qty-btn" data-action="dec">−</button>
-                    <input type="number" class="qty-input" value="1" min="1">
-                    <button type="button" class="qty-btn" data-action="inc">+</button>
-                  </div>
-                  <button type="button" class="btn-add-cart">Añadir al carrito</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="carrusel-slide">
-            <div class="producto-card">
-              <div class="producto-img placeholder">Foto pendiente</div>
-              <div class="producto-ribbon">
-                <span class="ribbon-tipo">Plátano Frito</span>
-                <span class="ribbon-sabor">Picante 🌶️</span>
-              </div>
-              <div class="producto-body">
-                <p><strong>Ingredientes:</strong> plátano verde (88%), aceite de girasol, sal y pimentón picante.</p>
-                <p class="alergenos">Alérgenos: puede contener cereales con gluten, frutos de cáscara, mostaza y semillas de sésamo.</p>
-                <span class="precio">Precio: 1,10 € / unidad</span>
-                <div class="add-to-cart" data-nombre="Plátano Frito - Picante">
-                  <div class="cantidad-selector">
-                    <button type="button" class="qty-btn" data-action="dec">−</button>
-                    <input type="number" class="qty-input" value="1" min="1">
-                    <button type="button" class="qty-btn" data-action="inc">+</button>
-                  </div>
-                  <button type="button" class="btn-add-cart">Añadir al carrito</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
+    <div class="hero-texto">
+      <span class="hero-badge">Granadilla de Abona · Tenerife</span>
+      <h1>Plátano frito <em>artesanal</em>, hecho a mano</h1>
+      <p>[REEMPLAZAR: eslogan real de la familia]</p>
+      <div class="hero-cta">
+        <a class="btn-whatsapp" href="https://wa.me/34633424305" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+        <a class="btn-secundario" href="productos.html">Ver productos →</a>
       </div>
-      <button type="button" class="carrusel-flecha prev" id="carruselPrev" aria-label="Anterior">‹</button>
-      <button type="button" class="carrusel-flecha next" id="carruselNext" aria-label="Siguiente">›</button>
-      <div class="carrusel-puntos" id="carruselPuntos"></div>
     </div>
-    <div class="cta-ver-productos">
-      <a class="btn-secundario" href="productos.html">Ver todos los productos →</a>
+
+    <div class="carrusel-col">
+      <div class="carrusel" id="carrusel">
+        <div class="carrusel-viewport">
+          <div class="carrusel-track" id="carruselTrack">
+
+            <div class="carrusel-slide">
+              <div class="producto-card">
+                <img src="imagenes/sal.jpg" alt="Plátano Frito - Al Punto de Sal" class="producto-img" style="object-position: 50% 34%">
+                <div class="producto-ribbon">
+                  <span class="ribbon-tipo">Plátano Frito</span>
+                  <span class="ribbon-sabor">Al Punto de Sal 🧂</span>
+                </div>
+                <div class="producto-body">
+                  <p><strong>Ingredientes:</strong> plátano verde (88%), aceite de girasol y sal.</p>
+                  <p class="alergenos">Alérgenos: no contiene alérgenos declarados.</p>
+                  <span class="precio">Precio: 1,10 € / unidad</span>
+                  <div class="add-to-cart" data-nombre="Plátano Frito - Al Punto de Sal">
+                    <div class="cantidad-selector">
+                      <button type="button" class="qty-btn" data-action="dec">−</button>
+                      <input type="number" class="qty-input" value="1" min="1">
+                      <button type="button" class="qty-btn" data-action="inc">+</button>
+                    </div>
+                    <button type="button" class="btn-add-cart">Añadir al carrito</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carrusel-slide">
+              <div class="producto-card">
+                <img src="imagenes/ajo.jpg" alt="Plátano Frito - Al Ajo" class="producto-img" style="object-position: 50% 46%">
+                <div class="producto-ribbon">
+                  <span class="ribbon-tipo">Plátano Frito</span>
+                  <span class="ribbon-sabor">Al Ajo 🧄</span>
+                </div>
+                <div class="producto-body">
+                  <p><strong>Ingredientes:</strong> plátano verde (88%), aceite de girasol, sal y ajo molido.</p>
+                  <p class="alergenos">Alérgenos: puede contener trazas de cacahuetes, dióxido de azufre y sulfitos.</p>
+                  <span class="precio">Precio: 1,10 € / unidad</span>
+                  <div class="add-to-cart" data-nombre="Plátano Frito - Al Ajo">
+                    <div class="cantidad-selector">
+                      <button type="button" class="qty-btn" data-action="dec">−</button>
+                      <input type="number" class="qty-input" value="1" min="1">
+                      <button type="button" class="qty-btn" data-action="inc">+</button>
+                    </div>
+                    <button type="button" class="btn-add-cart">Añadir al carrito</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carrusel-slide">
+              <div class="producto-card">
+                <img src="imagenes/picante.jpg" alt="Plátano Frito - Picante" class="producto-img" style="object-position: 50% 33%">
+                <div class="producto-ribbon">
+                  <span class="ribbon-tipo">Plátano Frito</span>
+                  <span class="ribbon-sabor">Picante 🌶️</span>
+                </div>
+                <div class="producto-body">
+                  <p><strong>Ingredientes:</strong> plátano verde (88%), aceite de girasol, sal y pimentón picante.</p>
+                  <p class="alergenos">Alérgenos: puede contener cereales con gluten, frutos de cáscara, mostaza y semillas de sésamo.</p>
+                  <span class="precio">Precio: 1,10 € / unidad</span>
+                  <div class="add-to-cart" data-nombre="Plátano Frito - Picante">
+                    <div class="cantidad-selector">
+                      <button type="button" class="qty-btn" data-action="dec">−</button>
+                      <input type="number" class="qty-input" value="1" min="1">
+                      <button type="button" class="qty-btn" data-action="inc">+</button>
+                    </div>
+                    <button type="button" class="btn-add-cart">Añadir al carrito</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <button type="button" class="carrusel-flecha prev" id="carruselPrev" aria-label="Anterior">‹</button>
+        <button type="button" class="carrusel-flecha next" id="carruselNext" aria-label="Siguiente">›</button>
+        <div class="carrusel-puntos" id="carruselPuntos"></div>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="nosotros" class="nosotros">
-  <div class="container">
-    <h2>Nuestra Historia</h2>
-    <p>[REEMPLAZAR: aquí va la historia de la familia — quién empezó Tostones Mar, desde cuándo, y qué los hace especiales. Un par de párrafos cortos y cercanos funcionan mejor.]</p>
+  <div class="container nosotros-inner reveal">
+    <div class="nosotros-foto">
+      <div class="foto-placeholder">
+        <span class="icono-placeholder">👨‍👩‍👧</span>
+        Foto de la familia / del proceso
+        <small>pendiente</small>
+      </div>
+    </div>
+    <div class="nosotros-texto">
+      <span class="section-tag">Nuestra historia</span>
+      <h2>De la familia a tu mesa</h2>
+      <p>[REEMPLAZAR: aquí va la historia de la familia — quién empezó Tostones Mar, desde cuándo, y qué los hace especiales. Un par de párrafos cortos y cercanos funcionan mejor.]</p>
+    </div>
   </div>
 </section>
 
 <section id="productos" class="productos">
-  <div class="container">
-    <h2>Nuestros Productos</h2>
+  <div class="container reveal">
+    <span class="section-tag">Nuestros productos</span>
+    <h2>Tres sabores, un mismo cariño</h2>
     <p class="subtitulo">Plátano verde frito artesanalmente, en tres versiones. Origen España · Peso: 90 gr</p>
 
     <div class="nutricion">
@@ -142,23 +163,27 @@
 </section>
 
 <section id="contacto" class="contacto">
-  <div class="container">
+  <div class="container reveal">
+    <span class="section-tag">Contacto</span>
     <h2>Contáctanos</h2>
     <p>Escríbenos y arma tu pedido directamente por WhatsApp.</p>
     <a class="btn-whatsapp" href="https://wa.me/34633424305" target="_blank" rel="noopener">Escribir por WhatsApp</a>
     <div class="datos-contacto">
-      <p>📍 Calle la Calzada Nº4, Granadilla de Abona, Santa Cruz de Tenerife</p>
-      <p>🕐 08:00 - 15:00</p>
-      <p>📞 +34 633 42 43 05</p>
-      <p>✉️ Tostonesmar@gmail.com</p>
-      <p>📷 <a href="https://www.instagram.com/tostones.mar?igsh=MTF5aGNlNXZ4ZDY1eA==" target="_blank" rel="noopener">@tostones.mar</a></p>
+      <div class="dato-card"><span class="dato-icono">📍</span><div><strong>Dirección</strong><span>Calle la Calzada Nº4, Granadilla de Abona, Santa Cruz de Tenerife</span></div></div>
+      <div class="dato-card"><span class="dato-icono">🕐</span><div><strong>Horario</strong><span>08:00 - 15:00</span></div></div>
+      <div class="dato-card"><span class="dato-icono">📞</span><div><strong>Teléfono</strong><span>+34 633 42 43 05</span></div></div>
+      <div class="dato-card"><span class="dato-icono">✉️</span><div><strong>Correo</strong><span>Tostonesmar@gmail.com</span></div></div>
+      <div class="dato-card"><span class="dato-icono">📷</span><div><strong>Instagram</strong><a href="https://www.instagram.com/tostones.mar?igsh=MTF5aGNlNXZ4ZDY1eA==" target="_blank" rel="noopener">@tostones.mar</a></div></div>
     </div>
   </div>
 </section>
 
 <footer class="footer">
   <div class="container">
-    <p>&copy; 2026 Tostones Mar. Todos los derechos reservados.</p>
+    <div class="footer-inner">
+      <img src="imagenes/logo.jpg" alt="Tostones Mar" class="footer-logo">
+      <p>&copy; 2026 Tostones Mar. Todos los derechos reservados.</p>
+    </div>
     <p class="legal">Razón Social: Ismael José Marcano Zambrano · Nº RGSEAA: 26.023279/TF</p>
   </div>
 </footer>
