@@ -368,6 +368,7 @@ section { padding: 70px 0; }
   gap: 8px;
   font-size: 1.05rem;
 }
+.datos-contacto a { color: var(--mostaza); }
 
 .footer {
   background: #241d0c;
