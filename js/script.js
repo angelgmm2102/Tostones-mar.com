@@ -164,6 +164,10 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
   document.getElementById('cerrarModal').addEventListener('click', cerrarModal);
 
+  const URL_SCRIPT_PEDIDOS = 'https://script.google.com/macros/s/AKfycbxrY4qq3uAz28DwGbOKmUlFvjfGV4PH7kVXLUh1bHmlPGnV7aLmnQSilOCHEAxhfl5l/exec';
+  const botonEnviar = checkoutForm.querySelector('button[type="submit"]');
+  const modalNota = checkoutModal.querySelector('.modal-nota');
+
   checkoutForm.addEventListener('submit', e => {
     e.preventDefault();
 
@@ -175,24 +179,36 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 
     const listaProductos = carrito
       .map(item => `- ${item.nombre} x${item.cantidad}`)
-      .join('\r\n');
+      .join('\n');
 
-    const asunto = 'Solicitud de pedido - Tostones Mar';
-    const cuerpo =
-      `Nombre completo: ${nombreCompleto}\r\n` +
-      `Teléfono: ${telefono}\r\n` +
-      `Correo electrónico: ${correo}\r\n\r\n` +
-      `Productos solicitados:\r\n${listaProductos}\r\n\r\n` +
-      `Este mensaje fue generado desde la página web de Tostones Mar.`;
+    botonEnviar.disabled = true;
+    botonEnviar.textContent = 'Enviando...';
 
-    const mailto = `mailto:angelgmm2102@gmail.com?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
-    window.location.href = mailto;
-
-    carrito = [];
-    guardar();
-    render();
-    checkoutForm.reset();
-    cerrarModal();
+    fetch(URL_SCRIPT_PEDIDOS, {
+      method: 'POST',
+      body: JSON.stringify({
+        nombre: nombreCompleto,
+        telefono: telefono,
+        correo: correo,
+        productos: listaProductos
+      })
+    })
+      .then(() => {
+        carrito = [];
+        guardar();
+        render();
+        checkoutForm.reset();
+        botonEnviar.disabled = false;
+        botonEnviar.textContent = 'Enviar solicitud por correo';
+        cerrarModal();
+        alert('¡Pedido enviado! Te contactaremos pronto por WhatsApp o correo.');
+      })
+      .catch(() => {
+        botonEnviar.disabled = false;
+        botonEnviar.textContent = 'Enviar solicitud por correo';
+        modalNota.textContent = 'No se pudo enviar. Revisa tu conexión e inténtalo de nuevo, o escríbenos por WhatsApp.';
+        modalNota.style.color = '#a33';
+      });
   });
 
   render();
