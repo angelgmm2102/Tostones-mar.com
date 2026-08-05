@@ -45,7 +45,7 @@ img { max-width: 100%; }
 
 /* ===== HEADER ===== */
 .header {
-  background: rgba(246, 243, 222, 0.92);
+  background: rgba(213, 215, 201, 0.95);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(107, 90, 36, 0.18);
   position: sticky;
@@ -69,26 +69,14 @@ img { max-width: 100%; }
   color: var(--texto);
 }
 
-.logo-img {
-  display: block;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--crema-oscuro);
-  box-shadow: var(--sombra-suave);
-  transition: transform 0.25s ease;
-}
-.brand:hover .logo-img { transform: rotate(-6deg) scale(1.04); }
-
 .brand-name {
-  font-family: 'Lora', serif;
-  font-weight: 600;
-  font-size: 1.1rem;
-  line-height: 1.15;
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 1;
   color: var(--oliva-oscuro);
+  white-space: nowrap;
 }
-.brand-name span { display: block; color: var(--mostaza); font-size: 0.95em; }
 
 .nav {
   display: flex;
@@ -809,8 +797,7 @@ section { padding: 88px 0; }
 @media (max-width: 600px) {
   .hero { padding: 56px 0 64px; }
   .hero-texto h1 { font-size: 2.15rem; }
-  .logo-img { width: 52px; height: 52px; }
-  .brand-name { font-size: 0.95rem; }
+  .brand-name { font-size: 2.2rem; }
   section { padding: 60px 0; }
   .modal-content { padding: 26px; }
 }
